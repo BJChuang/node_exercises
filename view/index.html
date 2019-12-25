@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>留言板</title>
+    <style>
+        html,body{padding: 80px;}
+        ul li ,i{list-style: none;}
+        li{ height: 60px; line-height: 60px; padding-left: 15px; border-bottom: 1px solid #ccc;}
+        li span{float:right}
+    </style>
+</head>
+<body>
+    <h1>留言板 <small><a href="release">发表留言</a></small></h1>
+    <ul>
+        <% for (var i=0;i<indexData.length;i++){%>
+            <li><i><%= i%>.</i><%= indexData[i].name%>说:<%= indexData[i].message%><span><%= indexData[i].dateTime%><span></li>
+        <%}%>
+    </ul>
+</body>
+</html>
